@@ -1,6 +1,7 @@
 import { Drawer } from "expo-router/drawer";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import '../firebaseConfig';
+import "../global.css";
 
 export default function RootLayout() {
   return (

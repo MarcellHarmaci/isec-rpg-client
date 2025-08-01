@@ -16,12 +16,12 @@ export default function Players() {
           querySnapshot.docs.map((doc: any) => ({
             id: doc.id,
             ...doc.data(),
-          }))
+          })),
         );
       },
       (error) => {
         console.error("Firestore onSnapshot error:", error);
-      }
+      },
     );
 
     return () => unsubscribe();
@@ -30,7 +30,9 @@ export default function Players() {
   return (
     <>
       {players.map((player) => (
-        <CharacterCard key={player.id} player={player} />
+        <div key={player.id} className="mx-6 mt-6">
+          <CharacterCard player={player} />
+        </div>
       ))}
     </>
   );
