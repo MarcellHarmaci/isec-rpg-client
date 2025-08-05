@@ -1,11 +1,11 @@
 import { Player } from "@/model/Player";
 import { Card, Divider, ProgressBar, Text } from "react-native-paper";
 
-interface CharacterCardProps {
+interface CharacterDetailsProps {
   player: Player;
 }
 
-const CharacterCard = ({ player }: CharacterCardProps) => {
+const CharacterDetails = ({ player }: CharacterDetailsProps) => {
   const calcHealthColor = (health: number) => {
     if (health <= 3) {
       return "red";
@@ -81,4 +81,4 @@ const CharacterCard = ({ player }: CharacterCardProps) => {
   );
 };
 
-export default CharacterCard;
+export default CharacterDetails;
